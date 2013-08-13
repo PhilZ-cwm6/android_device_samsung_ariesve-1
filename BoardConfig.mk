@@ -169,9 +169,6 @@ TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/ariesve/recovery/zImage
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/ariesve/recovery/recovery_keys.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/ariesve/recovery/graphics.c
 
-# FSTAB version
-RECOVERY_FSTAB_VERSION := 2
-
 # Partition flags for CWM/TWRP
 BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_USES_MMCUTILS := true
