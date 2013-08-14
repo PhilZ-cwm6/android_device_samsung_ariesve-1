@@ -188,6 +188,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.disable_scissor_opt=true
 
+# Set default number of background apps to 10
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.fw.bg_apps_limit=10
+
 # Dalvik Heap
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
