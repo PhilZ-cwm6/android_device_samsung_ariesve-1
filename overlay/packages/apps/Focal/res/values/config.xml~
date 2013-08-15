@@ -1,4 +1,0 @@
-<resources>
-    <!-- Whether or not to enable camera-mode=1 for ZSL on Qcom devices -->
-    <bool name="config_qualcommZslCameraMode">true</bool>
-</resources>
