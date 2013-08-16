@@ -31,6 +31,9 @@ debug.egl.hw=1
 debug.hwc.dynThreshold=1.9
 debug.mdpcomp.logs=0
 
+# Fix screenshots with legacy FB
+ro.bq.gpu_to_cpu_unsupported=1
+
 # Low Power Audio
 lpa.decode=false
 lpa.use-stagefright=false

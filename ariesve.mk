@@ -137,10 +137,18 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libc2dcolorconvert
 
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    make_ext4fs \
+    setup_fs
+
+# Device specific settings
+PRODUCT_PACKAGES += \
+    AriesParts
+
 # Misc
 PRODUCT_PACKAGES += \
-    com.android.future.usb.accessory \
-    AriesParts
+    com.android.future.usb.accessory
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -179,10 +187,6 @@ PRODUCT_COPY_FILES += \
 # Build properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0
-
-# Support Screenshot
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bq.gpu_to_cpu_unsupported=1
 
 # Adreno 2xx is slower with the scissor optimization enabled
 PRODUCT_PROPERTY_OVERRIDES += \
