@@ -146,9 +146,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+# Device specific settings
+PRODUCT_PACKAGES += \
+    AriesParts
+
 # WiFi
 PRODUCT_PACKAGES += \
-   libnetcmdiface
+    libnetcmdiface
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
