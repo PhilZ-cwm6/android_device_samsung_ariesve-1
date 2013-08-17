@@ -23,6 +23,7 @@
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
+USE_CAMERA_STUB := true
 
 # Vendor stuff
 -include vendor/samsung/ariesve/BoardConfigVendor.mk
@@ -97,23 +98,17 @@ BOARD_USES_QCOM_AUDIO_RESETALL := true
 BOARD_USES_QCOM_AUDIO_VOIPMUTE := true
 TARGET_QCOM_AUDIO_VARIANT := caf
 
-# EGL
+# Display
+COMMON_GLOBAL_CFLAGS += -DEGL_NEEDS_FNW
 BOARD_EGL_CFG := device/samsung/ariesve/config/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB := true
-
-# Display stuff
-TARGET_NO_HW_VSYNC := false
+TARGET_USES_ION := false
 TARGET_USES_C2D_COMPOSITION := true
-TARGET_FORCE_CPU_UPLOAD := true
 USE_OPENGL_RENDERER := true
 TARGET_PROVIDES_LIBLIGHT := true
 BOARD_USE_LEGACY_TOUCHSCREEN := true
 TARGET_QCOM_DISPLAY_VARIANT := legacy
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-
-# Memory allocation
-BOARD_NEEDS_MEMORYHEAPPMEM := true
-TARGET_USES_ION := false
 
 # Sensors
 BOARD_USE_LEGACY_SENSORS_FUSION := false
@@ -123,9 +118,9 @@ TARGET_PROVIDES_POWERHAL := true
 
 # Camera stuff
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_LEGACY
-USE_CAMERA_STUB := true
 BOARD_USES_QCOM_LEGACY_CAM_PARAMS := true
 BOARD_USES_LEGACY_OVERLAY := true
+BOARD_NEEDS_MEMORYHEAPPMEM := true
 BOARD_CAMERA_USE_MM_HEAP := true
 TARGET_DISABLE_ARM_PIE := true
 
@@ -138,7 +133,8 @@ COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_VENDOR_QCOM_AMSS_VERSION := 6225
 
-# Enable WEBGL in WebKit
+# Webkit
+TARGET_FORCE_CPU_UPLOAD := true
 ENABLE_WEBGL := true
 
 # FM Radio
