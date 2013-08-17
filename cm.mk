@@ -10,6 +10,8 @@ $(call inherit-product, $(LOCAL_PATH)/full_ariesve.mk)
 # Release name
 PRODUCT_RELEASE_NAME := ariesve
 
+CM_RELEASE := true
+
 # Setup device configuration
 PRODUCT_NAME := cm_ariesve
 PRODUCT_DEVICE := ariesve
