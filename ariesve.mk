@@ -165,6 +165,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libskia_legacy
 
+# enable Google-specific location features,
+# like NetworkLocationProvider and LocationCollector
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.com.google.locationfeatures=1 \
+        ro.com.google.networklocation=1
+
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/zImage
