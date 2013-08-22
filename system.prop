@@ -37,7 +37,6 @@ ro.bq.gpu_to_cpu_unsupported=1
 # Low Power Audio
 lpa.decode=false
 lpa.use-stagefright=false
-use.non-omx.mp3.decoder=true
 
 # Resampler quality
 af.resampler.quality=255
