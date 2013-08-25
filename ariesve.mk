@@ -194,10 +194,6 @@ PRODUCT_COPY_FILES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0
 
-# Adreno 2xx is slower with the scissor optimization enabled
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hwui.disable_scissor_opt=true
-
 # Set default number of background apps to 10
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.mem.max_hidden_apps=10
