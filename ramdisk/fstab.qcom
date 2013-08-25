@@ -17,6 +17,6 @@
 
 # VOLD
 #<src>                                      <mnt_point>       <type>  <mnt_flags and options>  <fs_mgr_flags>
-/devices/platform/msm_sdcc.2/mmc_host/mmc1  /storage/sdcard0  vfat    defaults                 voldmanaged=internal:28,nonremovable
-/devices/platform/msm_sdcc.4/mmc_host/mmc2  /storage/sdcard1  vfat    defaults                 voldmanaged=external:auto
+/devices/platform/msm_sdcc.2/mmc_host/mmc1  /storage/sdcard0  auto    defaults                 voldmanaged=internal:28,nonremovable
+/devices/platform/msm_sdcc.4/mmc_host/mmc2  /storage/sdcard1  auto    defaults                 voldmanaged=external:auto
 /devices/platform/msm_hsusb_host.0          /storage/usbdisk  auto    defaults                 voldmanaged=usbdisk:auto
