@@ -142,6 +142,10 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
+# Device specific settings
+PRODUCT_PACKAGES += \
+    AriesParts
+
 # Misc
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
