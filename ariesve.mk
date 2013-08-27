@@ -198,9 +198,9 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.mem.max_hidden_apps=10
 
-# Fix camcorder
+# Perform dexopt in data as our cache partition is very small
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.camcorder.disablemeta=1
+    dalvik.vm.dexopt-data-only=1
 
 # Dalvik Heap
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
