@@ -46,6 +46,7 @@ TARGET_ARCH_LOWMEM := true
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := scorpion
+TARGET_USE_O3 := true
 
 # Screens dimension
 TARGET_SCREEN_HEIGHT := 800
