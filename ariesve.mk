@@ -154,6 +154,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnetcmdiface
 
+# CM Packages
+PRODUCT_PACKAGES += \
+    APollo \
+    DSPManager \
+    libcyanogen-dsp \
+    audio_effects.conf \
+    CMFileManager
+
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
 PRODUCT_COPY_FILES += \
