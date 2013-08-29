@@ -12,8 +12,7 @@
 #<src>                 <mnt_point>   <type>  <mnt_flags and options>  <fs_mgr_flags>
 /dev/block/mmcblk0p8   /boot         emmc    defaults                 recoveryonly
 /dev/block/mmcblk0p13  /recovery     emmc    defaults                 recoveryonly
-/dev/block/mmcblk0p28  /sdcard       vfat    defaults                 recoveryonly
-/dev/block/mmcblk1p1   /external_sd  vfat    defaults                 recoveryonly
+/dev/block/mmcblk1p1   /external_sd  auto    defaults                 recoveryonly
 
 # VOLD
 #<src>                                      <mnt_point>       <type>  <mnt_flags and options>  <fs_mgr_flags>
