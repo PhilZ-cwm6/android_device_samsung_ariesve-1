@@ -114,13 +114,23 @@ PRODUCT_PACKAGES += \
     audio.primary.msm7x30 \
     audio_policy.msm7x30 \
     libaudio-resampler \
-    libaudioparameter
+    libaudioparameter \
+    libtinyalsa
 
 # Graphics
 PRODUCT_PACKAGES += \
     gralloc.msm7x30 \
     copybit.msm7x30 \
-    hwcomposer.msm7x30
+    hwcomposer.msm7x30 \
+    libtilerenderer \
+    libgenlock \
+    libmemalloc \
+    liboverlay \
+    libQcomUI
+
+# Camera
+PRODUCT_PACKAGES += \
+    libsurfaceflinger_client
 
 # HAL
 PRODUCT_PACKAGES += \
