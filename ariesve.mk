@@ -173,7 +173,8 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     CMFileManager \
     LockClock \
-    SoundRecorder
+    SoundRecorder \
+    BlueBalls
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
