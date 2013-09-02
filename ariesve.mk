@@ -157,10 +157,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
-# Device specific settings
-PRODUCT_PACKAGES += \
-    AriesParts
-
 # WiFi
 PRODUCT_PACKAGES += \
     libnetcmdiface
