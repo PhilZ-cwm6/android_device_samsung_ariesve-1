@@ -170,7 +170,8 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     LockClock \
     SoundRecorder \
-    BlueBalls
+    BlueBalls \
+    PerformanceControl
 
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
