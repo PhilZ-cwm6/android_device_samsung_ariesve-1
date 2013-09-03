@@ -204,10 +204,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/cifs.ko:root/lib/modules/cifs.ko \
     $(LOCAL_PATH)/prebuilt/dhd.ko:root/lib/modules/dhd.ko \
     $(LOCAL_PATH)/prebuilt/exfat.ko:root/lib/modules/exfat.ko \
+    $(LOCAL_PATH)/prebuilt/tun.ko:system/lib/modules/tun.ko \
     $(LOCAL_PATH)/prebuilt/scsi_wait_scan.ko:root/lib/modules/scsi_wait_scan.ko \
     $(LOCAL_PATH)/prebuilt/cifs.ko:system/lib/modules/cifs.ko \
     $(LOCAL_PATH)/prebuilt/dhd.ko:system/lib/modules/dhd.ko \
     $(LOCAL_PATH)/prebuilt/exfat.ko:system/lib/modules/exfat.ko \
+    $(LOCAL_PATH)/prebuilt/tun.ko:system/lib/modules/tun.ko \
     $(LOCAL_PATH)/prebuilt/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko
 
 # Build properties
