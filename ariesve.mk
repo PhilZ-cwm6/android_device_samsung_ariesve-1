@@ -161,7 +161,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnetcmdiface
 
-# CM Packages
+# Extra Packages
 PRODUCT_PACKAGES += \
     Apollo \
     DSPManager \
@@ -219,7 +219,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 
 # Set default number of background apps to 10
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.mem.max_hidden_apps=10
+    sys.mem.max_hidden_apps=5
 
 # Perform dexopt in data as our cache partition is very small
 PRODUCT_PROPERTY_OVERRIDES += \
