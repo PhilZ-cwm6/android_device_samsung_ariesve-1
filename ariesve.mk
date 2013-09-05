@@ -107,6 +107,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/lpm/media/battery_error.qmg:system/media/battery_error.qmg \
     $(LOCAL_PATH)/lpm/media/chargingwarning.qmg:system/media/chargingwarning.qmg
 
+# TWRP Bootanimation
+PRODUCT_BOOTANIMATION := $(LOCAL_PATH)/twrp/prebuilt/common/bootanimation/480.zip
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
