@@ -137,7 +137,8 @@ PRODUCT_PACKAGES += \
     camera.msm7x30 \
     gps.msm7x30 \
     lights.msm7x30 \
-    power.msm7x30
+    power.msm7x30 \
+    sensors.ariesve
 
 # QCOM OMX
 PRODUCT_PACKAGES += \
