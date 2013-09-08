@@ -140,10 +140,11 @@ PRODUCT_PACKAGES += \
 # QCOM OMX
 PRODUCT_PACKAGES += \
     libstagefrighthw \
-    libOmxCore \
-    libOmxVdec \
-    libOmxVenc \
-    libmm-omxcore \
+    libSEC_OMX_Core \
+    libOMX.SEC.AVC.Decoder \
+    libOMX.SEC.M4V.Decoder \
+    libOMX.SEC.M4V.Encoder \
+    libOMX.SEC.AVC.Encoder \
     libc2dcolorconvert
 
 # Filesystem management tools
