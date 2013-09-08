@@ -40,7 +40,8 @@ PRODUCT_COPY_FILES += \
 # Media configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/media_codecs.xml:system/etc/media_codecs.xml \
-    $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml
+    $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/config/audio_policy.conf:system/etc/audio_policy.conf
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
@@ -55,13 +56,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab \
     $(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
-# BT stuff
+# Get BT macaddress
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/get_macaddrs:system/bin/get_macaddrs
-
-# Audio configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/audio_policy.conf:system/etc/audio_policy.conf
 
 # Touchscreen calibration
 PRODUCT_COPY_FILES += \
@@ -151,10 +148,16 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
+    badblocks \
+    e2fsck \
+    mke2fs \
+    mke2fs.conf \
+    resize2fs \
+    tune2fs \
     make_ext4fs \
     setup_fs
 
-# Misc
+# Usb accessory
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
@@ -174,11 +177,6 @@ PRODUCT_PACKAGES += \
     BlueBalls \
     PerformanceControl
 
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/nvram_net.txt:system/vendor/firmware/nvram_net.txt
-
 # Support for Browser's saved page feature. This allows
 # for pages saved on previous versions of the OS to be
 # viewed on the current OS.
@@ -188,8 +186,13 @@ PRODUCT_PACKAGES += \
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.com.google.locationfeatures=1 \
-        ro.com.google.networklocation=1
+    ro.com.google.locationfeatures=1 \
+    ro.com.google.networklocation=1
+
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/nvram_net.txt:system/vendor/firmware/nvram_net.txt
 
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -232,8 +235,5 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# Vendor stuff
-$(call inherit-product-if-exists, vendor/samsung/ariesve/device-vendor.mk)
-
-# Set build date
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+# Vendor files
+$(call inherit-product, vendor/samsung/ariesve/device-vendor.mk)
