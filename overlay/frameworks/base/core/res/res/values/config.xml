@@ -30,9 +30,6 @@
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
 
-    <!-- Diable lockscreen rotation by default -->
-    <bool name="config_enableLockScreenRotation">true</bool>
-
 
 <!--COMMUNICATION-->
     <!-- This string array should be overridden by the device to present a list of network
@@ -145,9 +142,6 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
     <integer name="config_deviceHardwareKeys">7</integer>
-
-    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
-    <!-- bool name="config_intrusiveNotificationLed">true</bool -->
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">5</integer>

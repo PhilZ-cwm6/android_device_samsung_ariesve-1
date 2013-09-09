@@ -118,12 +118,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gralloc.msm7x30 \
     copybit.msm7x30 \
-    hwcomposer.msm7x30 \
-    libtilerenderer \
-    libgenlock \
-    libmemalloc \
-    liboverlay \
-    libQcomUI
+    hwcomposer.msm7x30
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -139,13 +134,13 @@ PRODUCT_PACKAGES += \
 
 # QCOM OMX
 PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libOmxCore \
+    libOmxVenc \
+    libOmxVdec \
     libstagefrighthw \
-    libSEC_OMX_Core \
-    libOMX.SEC.AVC.Decoder \
-    libOMX.SEC.M4V.Decoder \
-    libOMX.SEC.M4V.Encoder \
-    libOMX.SEC.AVC.Encoder \
-    libc2dcolorconvert
+    libc2dcolorconvert \
+    qcmediaplayer
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -176,7 +171,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     SoundRecorder \
     BlueBalls \
-    PerformanceControl
+    PerformanceControl \
+    PhotoTable
 
 # Support for Browser's saved page feature. This allows
 # for pages saved on previous versions of the OS to be
@@ -224,7 +220,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 
 # Set default number of background apps to 10
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.mem.max_hidden_apps=5
+    sys.mem.max_hidden_apps=3
 
 # Perform dexopt in data as our cache partition is very small
 PRODUCT_PROPERTY_OVERRIDES += \
