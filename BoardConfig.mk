@@ -157,7 +157,6 @@ ENABLE_JSC_JIT := true
 JS_ENGINE := v8
 HTTP := chrome
 ENABLE_WEBGL := true
-TARGET_FORCE_CPU_UPLOAD := true
 WEBCORE_INPAGE_VIDEO := true
 
 # USB mass storage
