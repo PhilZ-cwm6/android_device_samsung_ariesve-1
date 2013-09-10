@@ -25,10 +25,10 @@
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB := true
 
-# Vendor stuff
+# Vendor files
 -include vendor/samsung/ariesve/BoardConfigVendor.mk
 
-# Custom kernel header
+# Kernel header
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/ariesve/include
 
 # Platform
@@ -43,22 +43,19 @@ TARGET_NO_INITLOGO := true
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_LOWMEM := true
 TARGET_CPU_VARIANT := scorpion
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_USE_O3 := true
 
+# Dalvik startup with low memory footprint
+TARGET_ARCH_LOWMEM := true
+
 # Screens dimension
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
-# Bootanimation
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-TARGET_BOOTANIMATION_USE_RGB565 := true
-
-# Kernel stuff
+# Kernel
 BOARD_KERNEL_BASE := 0x00400000
 BOARD_KERNEL_PAGESIZE := 4096
 #TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30/
@@ -95,18 +92,15 @@ BOARD_USES_LEGACY_RIL := true
 BOARD_RIL_CLASS := ../../../device/samsung/ariesve/ril/
 
 # GPS
-BOARD_USES_QCOM_LIBRPC := true
 BOARD_USES_QCOM_GPS := true
-BOARD_USES_QCOM_HARDWARE := true
-BOARD_USES_QCOM_LIBS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := msm7x30
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 # Audio
 BOARD_HAVE_SAMSUNG_AUDIO := true
 BOARD_USES_QCOM_AUDIO_RESETALL := true
-BOARD_USES_QCOM_AUDIO_VOIPMUTE := true
 TARGET_QCOM_AUDIO_VARIANT := caf
+BOARD_USES_QCOM_AUDIO_VOIPMUTE := true
 
 # EGL
 BOARD_EGL_CFG := device/samsung/ariesve/config/egl.cfg
@@ -114,56 +108,51 @@ BOARD_EGL_NEEDS_LEGACY_FB := true
 BOARD_ALLOW_EGL_HIBERNATION := true
 USE_OPENGL_RENDERER := true
 
-# Display stuff
-COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=30
-TARGET_NO_HW_VSYNC := false
+# Display
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_FORCE_CPU_UPLOAD := true
 TARGET_PROVIDES_LIBLIGHT := true
 BOARD_USE_LEGACY_TOUCHSCREEN := true
 TARGET_QCOM_DISPLAY_VARIANT := legacy
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 # Memory allocation
-BOARD_NEEDS_MEMORYHEAPPMEM := true
 TARGET_USES_ION := false
-
-# Sensors
-BOARD_USE_LEGACY_SENSORS_FUSION := false
 
 # Power HAL
 TARGET_PROVIDES_POWERHAL := true
 
-# Camera stuff
+# Camera
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_LEGACY
+COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT
 BOARD_USES_QCOM_LEGACY_CAM_PARAMS := true
 BOARD_USES_LEGACY_OVERLAY := true
 BOARD_NEEDS_MEMORYHEAPPMEM := true
 BOARD_CAMERA_USE_MM_HEAP := true
 #TARGET_DISABLE_ARM_PIE := true
 
-# Hardware
-BOARD_HARDWARE_CLASS := device/samsung/ariesve/cmhw
-
-# QCOM stuff
+# QCOM
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
-COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_VENDOR_QCOM_AMSS_VERSION := 6225
 
 # Webkit
-WITH_JIT := true
-ENABLE_JSC_JIT := true
-JS_ENGINE := v8
-HTTP := chrome
 ENABLE_WEBGL := true
-WEBCORE_INPAGE_VIDEO := true
+
+# Sensors
+BOARD_USE_LEGACY_SENSORS_FUSION := false
+
+# Bootanimation
+TARGET_BOOTANIMATION_PRELOAD := true
+TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # USB mass storage
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 # Enable below line if compiling for a recovery version before 6.0.1.2
 #BOARD_UMS_LUNFILE := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
-# Partition sizes
+# Partitions
 # For the Galaxy S Plus, these are calculated from /proc/partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 5242880
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 7864320
@@ -175,11 +164,10 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Target filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# Vold stuff
+# Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 28
 
-# Recovery
 # Custom recovery files
 TARGET_RECOVERY_INITRC := device/samsung/ariesve/recovery/init.rc
 TARGET_RECOVERY_FSTAB := device/samsung/ariesve/ramdisk/fstab.qcom
@@ -192,23 +180,23 @@ BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 
+# Button configuration
+BOARD_HAS_NO_SELECT_BUTTON := true
+TW_CUSTOM_POWER_BUTTON := 107
+
+# Recovery display flags
+DEVICE_RESOLUTION := 480x800
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+
+# TWRP brightness flags
+TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.196609/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+
 # TWRP mount points
 TW_INTERNAL_STORAGE_PATH := "/sdcard"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-
-# Button configuration
-BOARD_HAS_NO_SELECT_BUTTON := true
-TW_CUSTOM_POWER_BUTTON := 107
-
-# Screen configuration
-DEVICE_RESOLUTION := 480x800
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-
-# TWRP brightness settings
-TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.196609/leds/lcd-backlight/brightness
-TW_MAX_BRIGHTNESS := 255
 
 # Misc TWRP flags
 TW_NO_REBOOT_BOOTLOADER := true
