@@ -51,6 +51,9 @@ TARGET_USE_O3 := true
 # Dalvik startup with low memory footprint
 TARGET_ARCH_LOWMEM := true
 
+# Hardware
+BOARD_HARDWARE_CLASS := device/samsung/ariesve/cmhw
+
 # Screens dimension
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
@@ -92,6 +95,9 @@ BOARD_USES_LEGACY_RIL := true
 BOARD_RIL_CLASS := ../../../device/samsung/ariesve/ril/
 
 # GPS
+BOARD_USES_QCOM_LIBRPC := true
+BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QCOM_LIBS := true
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := msm7x30
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
