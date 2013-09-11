@@ -139,8 +139,7 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libOmxVdec \
     libstagefrighthw \
-    libc2dcolorconvert \
-    qcmediaplayer
+    libc2dcolorconvert
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
