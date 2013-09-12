@@ -162,13 +162,11 @@ PRODUCT_PACKAGES += \
 
 # Extra Packages
 PRODUCT_PACKAGES += \
-    Apollo \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf \
     CMFileManager \
     LockClock \
-    SoundRecorder \
     BlueBalls \
     PerformanceControl \
     PhotoTable
