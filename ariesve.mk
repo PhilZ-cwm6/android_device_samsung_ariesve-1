@@ -169,7 +169,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     BlueBalls \
     PerformanceControl \
-    PhotoTable
+    PhotoTable \
+    SoundRecorder
 
 # Support for Browser's saved page feature. This allows
 # for pages saved on previous versions of the OS to be
