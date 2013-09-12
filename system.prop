@@ -26,7 +26,6 @@ ro.zram.default=0
 
 # QCOM
 com.qc.hardware=true
-debug.composition.type=c2d
 debug.sf.hw=1
 debug.egl.hw=1
 debug.hwc.dynThreshold=1.9
