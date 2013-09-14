@@ -220,6 +220,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1
 
+# Enable framebuffer memory mapping
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.gralloc.map_fb_memory=true
+
 # Dalvik Heap
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
