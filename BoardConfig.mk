@@ -157,6 +157,13 @@ BOARD_HAVE_FM_RADIO := true
 BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 BOARD_FM_DEVICE := si4709
 
+## Browser & WebKit
+JS_ENGINE := v8
+HTTP := chrome
+WITH_JIT := true
+ENABLE_JSC_JIT := true
+ENABLE_WEBGL := true
+
 # USB mass storage
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 # Enable below line if compiling for a recovery version before 6.0.1.2
