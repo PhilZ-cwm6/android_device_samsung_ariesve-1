@@ -47,6 +47,7 @@ TARGET_CPU_VARIANT := scorpion
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_USE_O3 := true
+TARGET_GCC_VERSION_EXP := 4.7.4
 
 # Dalvik startup with low memory footprint
 TARGET_ARCH_LOWMEM := true
