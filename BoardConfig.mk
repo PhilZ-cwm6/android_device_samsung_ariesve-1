@@ -42,6 +42,7 @@ TARGET_NO_INITLOGO := true
 
 # Architecture
 TARGET_ARCH := arm
+ARCH_ARM_HAVE_NEON := true
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := scorpion
 TARGET_CPU_ABI := armeabi-v7a
