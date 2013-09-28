@@ -44,9 +44,9 @@ TARGET_NO_INITLOGO := true
 TARGET_ARCH := arm
 ARCH_ARM_HAVE_NEON := true
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_VARIANT := scorpion
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := scorpion
 TARGET_USE_O3 := true
 TARGET_GCC_VERSION_EXP := 4.7.4
 
@@ -123,6 +123,7 @@ TARGET_FORCE_CPU_UPLOAD := true
 TARGET_PROVIDES_LIBLIGHT := true
 BOARD_USE_LEGACY_TOUCHSCREEN := true
 TARGET_QCOM_DISPLAY_VARIANT := legacy
+TARGET_QCOM_MEDIA_VARIANT := legacy
 
 # QCOM enhanced A/V
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
@@ -170,8 +171,6 @@ ENABLE_WEBGL := true
 
 # USB mass storage
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-# Enable below line if compiling for a recovery version before 6.0.1.2
-#BOARD_UMS_LUNFILE := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # Partitions
 # For the Galaxy S Plus, these are calculated from /proc/partitions
@@ -190,9 +189,9 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 28
 
 # Custom recovery files
-TARGET_RECOVERY_FSTAB := device/samsung/ariesve/ramdisk/fstab.qcom
-TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/ariesve/recovery/zImage
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/ariesve/recovery/recovery_keys.c
+TARGET_RECOVERY_INITRC := device/samsung/ariesve/recovery/init.rc
+TARGET_RECOVERY_FSTAB := device/samsung/ariesve/ramdisk/fstab.qcom
 
 # Partition flags for CWM/TWRP
 BOARD_HAS_SDCARD_INTERNAL := true
