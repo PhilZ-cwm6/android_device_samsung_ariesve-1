@@ -190,7 +190,7 @@ BOARD_VOLD_MAX_PARTITIONS := 28
 
 # Custom recovery files
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/ariesve/recovery/recovery_keys.c
-TARGET_RECOVERY_INITRC := device/samsung/ariesve/recovery/init.rc
+TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/ariesve/recovery/zImage
 TARGET_RECOVERY_FSTAB := device/samsung/ariesve/ramdisk/fstab.qcom
 
 # Partition flags for CWM/TWRP
