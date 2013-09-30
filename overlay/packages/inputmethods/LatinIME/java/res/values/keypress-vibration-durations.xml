@@ -20,7 +20,7 @@
 <resources>
     <!-- Build condition,duration_in_milliseconds -->
     <string-array name="keypress_vibration_durations" translatable="false">
-        <item>,40</item>
+        <item>,30</item>
     </string-array>
 </resources>
 
